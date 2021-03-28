@@ -1,8 +1,23 @@
+<?php
+	session_start();
+	if(!isset($_SESSION["loggedin"])){
+		header("Location: login.php");
+	}
+	require_once "db_config.php";
+	
+	
+?>
+
 <html>
-     <body>
-	 <title> Dashboard</title>
-	 <span> Welcome to dashboard</span><br>
-	 <a target="_blank" href="AddStudent.php">AddStudent</a><br>
-	 <a target="_blank" href="Allstudents.php"> AddStudent</a><br>
-	 <a target="_blank" href="EditStudent.php"> EditStudent</a><br>
-	 <a target="_blank" href="AllDep.php"> AllDep</a>
+	<body>
+	<span> Welcome to Dashboard </span>
+	
+	<a target="_blank" href="allstudents.php"> All Students </a>
+	 <a target="_blank" href="addstudent.php"> Add Student </a>
+	 <a target="_blank" href="editstudent.php"> Edit Student </a>
+
+	
+	</body>
+</html>	
+
+
